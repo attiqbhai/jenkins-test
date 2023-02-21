@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  parameters{ 
-    string(defaultValue: "maintainer", 
-      description: 'Enter user role:', name: 'userRole')
-  }
   stages {
     stage('sleep') {
       steps {
@@ -14,5 +10,8 @@ pipeline {
   }
   environment {
     test = 'test-value'
+  }
+  parameters {
+    string(defaultValue: 'maintainer', description: 'Enter user role:', name: 'userRole')
   }
 }

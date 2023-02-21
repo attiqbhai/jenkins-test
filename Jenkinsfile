@@ -1,11 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sleep 10
       }
     }
 
+  }
+  environment {
+    test = 'test-value'
   }
 }

@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.4.0</app.runtime>
-		<mule.maven.plugin.version>3.8.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -43,7 +43,8 @@
 						<workers>${cloudhub.workers}</workers>
 						<workerType>${cloudhub.workerType}</workerType>
 						<properties>
-							<key>value</key>
+							<anypoint.platform.client_id>${cloudhub.env.client_id}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${cloudhub.env.client_secret}</anypoint.platform.client_secret>
 						</properties>
 					</cloudHubDeployment>
 				</configuration>

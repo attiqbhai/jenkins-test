@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (C) MuleSoft, Inc. All rights reserved. http://www.mulesoft.com
+  
+  The software in this package is published under the terms of the
+  Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License,
+  a copy of which has been included with this distribution in the LICENSE.txt file.
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <!-- MuleSoft repository for artifacts related to Mule runtime EE -->
+      <id>nexus</id>
+      <!-- students: replace with credentials provided in class -->
+      <username>admin</username>
+      <password>admin</password>
+    </server>
+    <server>
+      <!-- MuleSoft repository for artifacts related to Mule runtime EE -->
+      <id>nexus1</id>
+      <!-- students: replace with credentials provided in class -->
+      <username>admin</username>
+      <password>admin</password>
+    </server>
+    <server>
+      <!-- MuleSoft repository for artifacts related to Mule runtime EE -->
+      <id>mulesoft-releases</id>
+      <!-- students: replace with credentials provided in class -->
+      <username>apisero.nexus</username>
+      <password>pWhdnHcG</password>
+    </server>
+    <server>
+      <!-- Anypoint Exchange repository of the MuleSoft Services Anypoint Platform organization -->
+      <id>anypoint-exchange-v3</id>
+      <username>~~~Client~~~</username>
+      <password>c090f730e9e14a7fa3b8ce550b34eb02~?~86126945FFe64c0994F175eE0375a59d</password>
+    </server>
+  </servers>
+  <pluginGroups>
+    <pluginGroup>org.mule.tools</pluginGroup>
+  </pluginGroups>
+  <profiles>
+    <profile>
+      <id>Mule</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>mulesoft-releases</id>
+          <name>MuleSoft Repository</name>
+          <url>https://repository.mulesoft.org/releases/</url>
+          <layout>default</layout>
+        </repository>
+        <repository>
+		  <id>nexus</id>
+		  <name>MuleSoft Releases</name>
+		  <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <repository>
+        	<id>nexus1</id>
+        	<name>MuleSoft Snapshots</name>
+        	<url>http://localhost:8081/repository/maven-snapshots/</url>
+        	<snapshots>
+            	<enabled>true</enabled>
+        	</snapshots>
+        	<releases>
+            	<enabled>false</enabled>
+        	</releases>
+    	</repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>mulesoft-releases</id>
+          <name>MuleSoft Repository</name>
+          <url>https://repository.mulesoft.org/releases/</url>
+          <layout>default</layout>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</settings>

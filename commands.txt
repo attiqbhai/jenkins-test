@@ -1,0 +1,63 @@
+mvn -s settings.xml org.apache.maven.plugins:maven-dependency-plugin:3.5.0:copy -Dartifact=com.mycompany:jenkins-test:1.0.0-20230223.030524-15:jar:mule-application -DoutputDirectory=./
+
+mvn -s settings.xml org.apache.maven.plugins:maven-dependency-plugin:3.5.0:copy -Dartifact=com.mycompany:jenkins-test:1.0.0-20230223.030524-15 -DoutputDirectory=./
+
+mvn -s settings.xml org.apache.maven.plugins:maven-dependency-plugin:3.5.0:copy -Dartifact=com.mycompany:jenkins-test:1.0.0-20230223.030524-15:pom -DoutputDirectory=./
+
+mvn -U --batch-mode -s settings.xml -Dmule.version=4.4.0 -Danypoint.applicationName=jenkins-test -Dartifact=jenkins-test-1.0.0-20230223.030524-15-mule-application.jar -Danypoint.mule.environment=DEV -Danypoint.username=feb-2023 -Danypoint.password=America100! -Dcloudhub.env=DEV -Dcloudhub.region=us-east-1 -Dcloudhub.workerType=MICRO -Dcloudhub.workers=1 -Dcloudhub.env.client_id=cd474d9d0881480ebbca5f74e16e83f2 -Dcloudhub.env.client_secret=e82faAEBFe824e179b962Aca3172E9Af mule:deploy 
+
+mvn -U --batch-mode -s settings.xml \
+-Dmule.version=4.4.0  \
+-Danypoint.applicationName=jenkins-test \
+-Dartifact=jenkins-test-1.0.0-20230223.030524-15-mule-application.jar \
+-Danypoint.mule.environment=DEV \
+-Danypoint.username=feb-2023 \
+-Danypoint.password=America100! \
+-Dcloudhub.env=DEV \
+-Dcloudhub.region=us-east-1 \
+-Dcloudhub.workerType=MICRO \
+-Dcloudhub.workers=1 \
+-Dcloudhub.env.client_id=cd474d9d0881480ebbca5f74e16e83f2 \
+-Dcloudhub.env.client_secret=e82faAEBFe824e179b962Aca3172E9Af \
+mule:deploy 
+
+mvn -U --batch-mode -s settings.xml deploy -DmuleDeploy \
+-Dmule.version=4.4.0  \
+-Danypoint.applicationName=jenkins-test \
+-DgroupId=com.mycompany
+-DartifactId=jenkins-test
+-Dversion=1.0.0-SNAPSHOT
+-Dartifact=jenkins-test-1.0.0-20230223.030524-15-mule-application.jar \
+-Danypoint.mule.environment=DEV \
+-Danypoint.username=feb-2023 \
+-Danypoint.password=America100! \
+-Dcloudhub.env=DEV \
+-Dcloudhub.region=us-east-1 \
+-Dcloudhub.workerType=MICRO \
+-Dcloudhub.workers=1 \
+-Dcloudhub.env.client_id=cd474d9d0881480ebbca5f74e16e83f2 \
+-Dcloudhub.env.client_secret=e82faAEBFe824e179b962Aca3172E9Af \
+mule:deploy 
+
+
+
+anypoint.platform.analytics_base_uri=https://analytics-ingest.anypoint.mulesoft.com/
+anypoint.platform.client_id=1362f6fb74984d2faef1dcf37f3284d4
+anypoint.platform.client_secret=7DFc56d77C97483eB2cA10afEeCA6237
+anypoint.platform.base_uri=https://anypoint.mulesoft.com/
+
+
+
+mvn -U --batch-mode -s settings.xml \
+-Dmule.version=4.4.0  \
+-Danypoint.applicationName=jenkins-test \
+-Danypoint.mule.environment=DEV \
+-Danypoint.username=feb-2023 \
+-Danypoint.password=America100! \
+-Dcloudhub.env=DEV \
+-Dcloudhub.region=us-east-1 \
+-Dcloudhub.workerType=MICRO \
+-Dcloudhub.workers=1 \
+-Dcloudhub.env.client_id=cd474d9d0881480ebbca5f74e16e83f2 \
+-Dcloudhub.env.client_secret=e82faAEBFe824e179b962Aca3172E9Af \
+mule:deploy
